@@ -1,6 +1,10 @@
+import logging
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin, urlparse
+
+logging.basicConfig(filename='JTPI_Error.log', filemode='w', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
 
 def fetch_page(url):
     try:
