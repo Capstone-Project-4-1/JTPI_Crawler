@@ -3,22 +3,25 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin, urlparse
 
 def fetch_page(url):
-    # 웹 페이지에서 HTML을 가져온다
-    response = requests.get(url)
-    if response.status_code == 200:
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
         return response.text
-    else:
+    except requests.RequestException as e:
+        logging.error(f"Failed to fetch {url}: {e}")
         return None
 
 def parse_links(html, base_url):
-    # 주어진 HTML에서 모든 링크를 파싱하고 정규화
     soup = BeautifulSoup(html, 'html.parser')
     links = set()
     for link in soup.find_all('a', href=True):
         full_url = urljoin(base_url, link['href'])
-        if urlparse(full_url).netloc == urlparse(base_url).netloc:  
-            links.add(full_url)
+        parsed_url = urlparse(full_url)
+        clean_url = parsed_url.scheme + "://" + parsed_url.netloc + parsed_url.path  # 쿼리 및 앵커 제거
+        if parsed_url.netloc == urlparse(base_url).netloc:
+            links.add(clean_url)
     return links
+
 
 def crawl_website(start_url):
     # 방문할 페이지들의 리스트
@@ -48,7 +51,7 @@ def parse_html(html):
 
 
 def main():
-    start_url = "https://example.com" 
+    start_url = "https://www.miyakoh.co.jp/rosen/ticket/1day.html" 
     crawl_website(start_url)
 
 if __name__ == "__main__":
