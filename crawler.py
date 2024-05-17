@@ -27,7 +27,7 @@ def parse_links(html, base_url):
     return links
 
 
-def crawl_website(start_url, max_depth = 2):
+def crawl_website(start_url, max_depth = 1):
     # 방문할 페이지들의 리스트
     to_visit = [(start_url,0)] #Url과 깊이
     visited = set()
@@ -60,7 +60,7 @@ def parse_html(html):
 
     soup = BeautifulSoup(html, 'html.parser')
 
-    headers = soup.find_all('h1')
+    headers = soup.find_all()
     for header in headers:
         print(header.text)
 
