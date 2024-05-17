@@ -27,23 +27,34 @@ def parse_links(html, base_url):
     return links
 
 
-def crawl_website(start_url):
+def crawl_website(start_url, max_depth = 2):
     # 방문할 페이지들의 리스트
-    to_visit = set([start_url])
+    to_visit = [(start_url,0)] #Url과 깊이
     visited = set()
 
     while to_visit:
-        url = to_visit.pop()
+        url,depth = to_visit.pop(0)
+        if depth > max_depth:
+            logging.info(f"Reached maximum depth at {url}")
+            continue
+
         if url not in visited:
             print(f"Visiting: {url}")
             html = fetch_page(url)
+            logging.info(f"Visiting {url} at depth {depth}")
             if html:
                 # 해당 페이지에서 필요한 정보를 처리
-                parse_html(html)  # 여기에 필요한 파싱 로직을 추가
+                parse_html(html) # 여기에 필요한 파싱 로직을 추가
                 visited.add(url)
-                # 페이지에서 새로운 링크를 찾고 큐에 추가
-                links = parse_links(html, url)
-                to_visit.update(links - visited)
+                if depth < max_depth:
+                    links = parse_links(html, url)
+                    for link in links:
+                        if link not in visited: # 페이지에서 새로운 링크를 찾고 큐에 추가
+                            to_visit.append((link, depth + 1))
+
+    print("Finsih")
+    logging.info(f"Finshi")
+
 
 def parse_html(html):
 
@@ -55,7 +66,7 @@ def parse_html(html):
 
 
 def main():
-    start_url = "https://www.miyakoh.co.jp/rosen/ticket/1day.html" 
+    start_url = "https://www.miyakoh.co.jp/rosen/ticket/index.html" 
     crawl_website(start_url)
 
 if __name__ == "__main__":
