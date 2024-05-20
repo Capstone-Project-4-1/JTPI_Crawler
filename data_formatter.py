@@ -21,8 +21,6 @@ def testAPI():
 
     return response.choices[0].message.content
 
-
-
 def main():
     print(testAPI())
 if __name__ == "__main__":
