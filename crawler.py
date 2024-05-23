@@ -15,9 +15,14 @@ class Crawler:
             response = requests.get(url)
             response.raise_for_status()
             return response.text
-        except requests.RequestException as e:
+        except requests.RequestException as e: #연결 예외처리
             logging.error(f"Failed to fetch {url}: {e}")
             return None
+        except Exception as e: #모든 예외처리
+            logging.error(f"Failed : {e}")
+            return None
+      
+
    
     @staticmethod
     def parse_links(html, base_url):
@@ -66,17 +71,8 @@ class Crawler:
     def parse_html(html):
         content =""
         soup = BeautifulSoup(html, 'html.parser')
-        headers = soup.find_all("h2")
+        headers = soup.find_all("h2") #해더 선택
         for header in headers:
-            content = content + header.text+"/"
+            if header.text.strip():
+                content = content + header.text+"/" #문단 나누기
         return content
-
-
-
-def main():
-    #start_url = "https://www.miyakoh.co.jp/rosen/ticket/1day.html" 
-    start_url = "https://www.surutto.com/kansai_rw/ko/krp.html"
-    crawler = Crawler()
-    print(crawler.crawl_website(start_url,1))
-if __name__ == "__main__":
-    main()

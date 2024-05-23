@@ -1,5 +1,7 @@
 #use gpt-3.5 turbo api for data format
 from openai import OpenAI
+
+
 class Formatter :
     def __init__(self,api_key):
         self.client = OpenAI(api_key=api_key)
@@ -17,12 +19,12 @@ class Formatter :
         temperature=0)
         return response.choices[0].message.content
     
-    def checkPass(self,sclipt):
+    def checkPass(self,sclipt): 
         USER_INPUT_MSG = sclipt
         response = self.client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[
-                {"role": "system", "content": "너는 사용자가 입력한 정보에 '패스', '이용권' 등의 단어가 포함되었는지 파악해 대답은 True / False 로만해줘"},
+                {"role": "system", "content": "너는 사용자가 입력한 정보에 '패스', '이용권' 등의 교통 패스와 관련된 내용이 포함되었는지 파악해 대답은 True / False 로만해줘"},
                 {"role": "user", "content": USER_INPUT_MSG}
             ],
             temperature=0,
@@ -46,7 +48,7 @@ class Formatter :
         return response.choices[0].message.content #return 값을 리스트형식으로 반환 예정
 
 
-    def dataFormatter(self,sclipt):
+    def dataFormatter(self,sclipt): #필요없을듯 삭제 예정 
         if(self.checkPass(sclipt)==True):
             return self.formateDate(sclipt)
         else:
