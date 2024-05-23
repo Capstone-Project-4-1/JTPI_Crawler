@@ -3,6 +3,8 @@ import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin, urlparse
 
+import data_formatter as df
+
 logging.basicConfig(filename='JTPI_Error.log', filemode='w', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 
@@ -27,7 +29,7 @@ def parse_links(html, base_url):
     return links
 
 
-def crawl_website(start_url, max_depth = 1):
+def crawl_website(start_url, max_depth = 2):
     # 방문할 페이지들의 리스트
     to_visit = [(start_url,0)] #Url과 깊이
     visited = set()
@@ -60,14 +62,16 @@ def parse_html(html):
 
     soup = BeautifulSoup(html, 'html.parser')
 
-    headers = soup.find_all()
+    headers = soup.find_all("h2")
     for header in headers:
         print(header.text)
+        print(df.checkPass(header.text))
 
 
 def main():
-    start_url = "https://www.miyakoh.co.jp/rosen/ticket/index.html" 
-    crawl_website(start_url)
+    #start_url = "https://www.miyakoh.co.jp/rosen/ticket/1day.html" 
+    start_url = "https://www.surutto.com/kansai_rw/ko/krp.html"
+    crawl_website(start_url,0)
 
 if __name__ == "__main__":
     main()

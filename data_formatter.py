@@ -21,31 +21,22 @@ def testAPI():
 
     return response.choices[0].message.content
 
-def checkPass(sclipt):  # 수정 필요
+def checkPass(sclipt):
     USER_INPUT_MSG = sclipt
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
-            {"role": "system", "content": [{"type": "text", "text": "너는 사용자가 입력한 정보가 교통패스 정보인지 파악해 대답은 True / False 로만해줘"}]},
-            {"role": "user", "content": [{"type": "text", "text": "도쿄 시간표"}]},
-            {"role": "assistant", "content": [{"type": "text", "text": "False"}]},
-            {"role": "user", "content": [{"type": "text", "text": "도쿄 원데이 패스"}]},
-            {"role": "assistant", "content": [{"type": "text", "text": "True"}]},
-            {"role": "user", "content": [{"type": "text", "text": "미나미패스"}]},
-            {"role": "assistant", "content": [{"type": "text", "text": "True"}]},
-            {"role": "user", "content": [{"type": "text", "text": "신주쿠 패스"}]},
-            {"role": "assistant", "content": [{"type": "text", "text": "True"}]},
-            {"role": "user", "content": [{"type": "text", "text": "KANSAI RAILWAY PASS"}]},
-            {"role": "assistant", "content": [{"type": "text", "text": "True"}]},
+            {"role": "system", "content": "너는 사용자가 입력한 정보에 '패스', '이용권' 등의 단어가 포함되었는지 파악해 대답은 True / False 로만해줘"},
             {"role": "user", "content": USER_INPUT_MSG}
         ],
-        temperature=1,
-        max_tokens=34,
+        temperature=0,
+        max_tokens=3,
         top_p=1,
         frequency_penalty=0,
         presence_penalty=0
     )
-    return response.choices[0].message.content == "True"  # return 값을 bool 타입으로 수정 필요
+    return response.choices[0].message.content == "True"  # return 값을 bool 타입
+
 
 
 
