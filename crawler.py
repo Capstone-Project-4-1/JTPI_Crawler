@@ -3,7 +3,8 @@ import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin, urlparse
 
-logging.basicConfig(filename='JTPI_Error.log', filemode='w', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+#로그
+logging.basicConfig(filename='JTPI_Error.log', filemode='a', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class Crawler:
     def __init__(self) -> None:
@@ -64,7 +65,7 @@ class Crawler:
                                 to_visit.append((link, depth + 1))
 
         print("Finsih")
-        logging.info(f"Finshi")
+        logging.info(f"Finsih")
         return link_content_dict
 
     @staticmethod

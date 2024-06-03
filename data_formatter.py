@@ -24,7 +24,7 @@ class Formatter :
         response = self.client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[
-                {"role": "system", "content": "너는 사용자가 입력한 정보에 '패스', '이용권' 등의 교통 패스와 관련된 내용이 포함되었는지 파악해 대답은 True / False 로만해줘"},
+                {"role": "system", "content": "You need to determine if the user's input contains terms related to travel passes for tourists such as 'day pass', 'ride pass', 'ticket', 'one-day pass', 'three-day pass', 'five-day pass', 'tourist', 'visitor', 'sightseeing', etc. If it contains terms related to local residents or senior citizens such as 'senior pass', 'resident pass', etc., respond with 'False'. If it contains any tourist pass terms, respond with 'True'. Otherwise, respond with 'False'."},
                 {"role": "user", "content": USER_INPUT_MSG}
             ],
             temperature=0,
