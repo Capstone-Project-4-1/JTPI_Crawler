@@ -22,8 +22,6 @@ class Crawler:
         except Exception as e: #모든 예외처리
             logging.error(f"Failed : {e}")
             return None
-      
-
    
     @staticmethod
     def parse_links(html, base_url):
@@ -70,10 +68,25 @@ class Crawler:
 
     @staticmethod
     def parse_html(html):
-        content =""
+        content = []
         soup = BeautifulSoup(html, 'html.parser')
-        headers = soup.find_all("h2") #해더 선택
+        headers = soup.find_all(["h1","h2"]) #해더 선택
         for header in headers:
-            if header.text.strip():
-                content = content + header.text+"/" #문단 나누기
-        return content
+            text = header.get_text(strip=True)
+            if text:
+                content.append(text)
+        return "/".join(content)
+    
+   
+    def parse_html_ALL(self,url):
+        content = []
+        html = self.fetch_page(url)
+        if html:
+            soup = BeautifulSoup(html, 'html.parser')
+            headers = soup.find_all() #해더 선택
+            for header in headers:
+                text = header.get_text(strip=True)
+                if text:
+                    content.append(text)
+        return "/".join(content)
+            
