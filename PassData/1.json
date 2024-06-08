@@ -1,0 +1,19 @@
+{
+    "title": "JR 도쿄 와이드 패스",
+    "siteName" : "JR-EAST",
+    "siteID": "https://www.jreast.co.jp/multi/ko/pass/tokyowidepass.html",
+    "price": "15000,7500",
+    "period": 3,
+    "transportType": "열차",
+    "cityNames": "도쿄, 요코하마",
+    "stationNames": "도쿄, 우에노, 오미야, 다카사키, 나가노, 가루이자와",
+    "Map_Url": "https://wovn.global.ssl.fastly.net/ImageValue/production/5d8438afb4546364387be243/ko/5d8438afb4546364387be243.804437791.1709027369645.png",
+    "imageURL": "https://seeklogo.com/images/J/JR-East-logo-384C8D5973-seeklogo.com.png",
+    "break_even_usage": 1,
+    "benefitInformation": "스키 시즌 중 갈라 유자와 리조트에서 리프트 티켓 할인 및 온천 입장 혜택.",
+    "reservationInformation": "주요 JR 동일본 역 여권 판독기가 설치된 지정석 발매기.",
+    "refundInformation": "사용하지 않은 패스에 한해 출발 전 환불 가능 (수수료 부과)",
+    "productDescription": "어른 1명이 조에츠 신칸센(도쿄역~GALA 유자와역) & 특급 닛코호(오미야역~도부닛코역)를 지정석으로 이용하실 경우 교통비는 총 약 21,000엔이 필요합니다.",
+    "create_at": "NOW()",
+    "update_at": "NOW()"
+}

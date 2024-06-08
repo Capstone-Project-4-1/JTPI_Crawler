@@ -52,6 +52,7 @@ def test_integrate():
         
 
 def main():
+    #test_formatter
     test_integrate()
     #test_crawler()
 if __name__ == "__main__":
