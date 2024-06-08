@@ -5,7 +5,6 @@ import json
 import mysql.connector
 from datetime import datetime
 
-
 # 데이터베이스 연결 설정
 conn = mysql.connector.connect(
     host = os.environ.get('DB_HOST'),
