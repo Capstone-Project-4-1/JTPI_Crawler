@@ -1,0 +1,20 @@
+{
+    "title": "논비리 홀리데이 Suica 패스",
+    "siteName": "JR-EAST",
+    "siteID": "https://www.jreast.co.jp/multi/ko/pass/nonbiri_pass.html",
+    "price": "2670,1330",
+    "period": 1,
+    "transportType": "열차",
+    "cityNames": "진보초, 아시카가, 지치 의과대학, 오야마, 가와고에, 오미야, 미나미-우라와, 시모-마쓰도, 아비코, 쓰치우라, 니시-고쿠분지, 무사시-우라와, 아카바네, 다바타, 기타-센주, 닛포리, 우에노, 니시-후나바시, 치바, 사쿠라, 나리타, 신-키바, 덴노즈 아일, 하마마츠초, 쓰루미, 하치오지, 다치카와, 오미야, 가와고, 무사시-고스기, 요코하마, 사쿠라기초, 간나이, 오후나, 가마쿠라",
+    "stationNames": "진보초 역, 아시카가 역, 지치 의과대학 역, 오야마 역, 가와고에 역, 오미야 역, 미나미-우라와 역, 시모-마쓰도 역, 아비코 역, 쓰치우라 역, 니시-고쿠분지 역, 무사시-우라와 역, 아카바네 역, 다바타 역, 기타-센주 역, 닛포리 역, 우에노 역, 니시-후나바시 역, 치바 역, 사쿠라 역, 나리타 역, 신-키바 역, 덴노즈 아일 역, 하마마츠초 역, 쓰루미 역, 하치오지 역, 다치카와 역, 오미야 역, 가와고 역, 무사시-고스기 역, 요코하마 역, 사쿠라기초 역, 간나이 역, 오후나 역, 가마쿠라 역",
+    "Map_Url": "https://www.jreast.co.jp/multi/pass/img/nonbiri_pass/map_available-area.png",
+    "imageURL": "https://www.jreast.co.jp/multi/material/img/logo_jreast.png",
+    "break_even_usage": "두 지역(ex)도쿄역과 아시카가 플라워파크역)을 왕복시 본전",
+    "benefitInformation": "",
+    "reservationInformation": "이용 에리어 내의 JR 동일본의 지정석 발매기에서 구매 가능",
+    "refundInformation": "사용하지 않은 패스에 한해 출발 전 환불 가능 (수수료 부과)",
+    "productDescription": "논비리 홀리데이 Suica 패스는 도쿄 근처 지역에서 편리하게 사용할 수 있는 IC카드 전용의 저렴한 승차권입니다. 프리 구간 내 보통열차(쾌속 포함)와 도쿄 임해 고속 철도선(린카이선), 도쿄 모노레일선의 모든 노선을 자유롭게 이용할 수 있습니다.",
+    "routeInformation": "JR 동일본선, 도쿄 임해 고속 철도선, 도쿄 모노레일선",
+    "create_at": "NOW()",
+    "update_at": "NOW()"
+}

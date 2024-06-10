@@ -1,0 +1,20 @@
+{
+    "title": "모노레일과 야마노테선 할인 티켓",
+    "siteName": "Tokyo Monorail",
+    "siteID": "https://www.tokyo-monorail.co.jp/english/tickets/value/yamanote.html",
+    "price": "540,270",
+    "period": 1,
+    "transportType": "모노레일, 열차",
+    "cityNames": "하네다공항 제3터미널, 하네다공항 제1터미널, 하네다공항 제2터미널, 도쿄 모노레일, 하마마쓰초, 우에노, 아키하바라, 가구라자카, 신주쿠, 이케부쿠로, 시부야, 오사키",
+    "stationNames": "하네다공항 제3터미널 역, 하네다공항 제1터미널 역, 하네다공항 제2터미널 역, 도쿄 모노레일 역, 하마마쓰초 역, 우에노 역, 아키하바라 역, 가구라자카 역, 신주쿠 역, 이케부쿠로 역, 시부야 역, 오사키 역",
+    "Map_Url": "https://www.tokyo-monorail.co.jp/tickets/value/img/img_yamanote_area.gif",
+    "imageURL": "https://www.tokyo-monorail.co.jp/common/template/img/tp_pc_logo.png",
+    "break_even_usage": "1~2구간 이동시 본전(ex)하네다 공항 터미널 3 - 이케부쿠로 (800엔))",
+    "benefitInformation": "",
+    "reservationInformation": "하네다 공항 터미널 1, 2, 3역의 티켓 발매기에서 구매 가능",
+    "refundInformation": "사용하지 않은 티켓에 한해 출발 전 환불 가능하며, 환불 수수료가 부과됩니다. 환불은 도쿄 모노레일의 창구에서 처리할 수 있습니다.",
+    "productDescription": "모노레일과 야마노테선 할인 티켓은 하네다 공항에서 하마마츠초 역까지 도쿄 모노레일을 이용한 후, JR 야마노테선의 모든 역까지 이동할 수 있는 할인 티켓입니다. 주말 및 공휴일에 이용할 수 있습니다.",
+    "routeInformation": "하네다 공항 터미널 1, 2, 3역에서 모노레일 하마마츠초 역을 경유하여 JR 야마노테선의 모든 역",
+    "create_at": "NOW()",
+    "update_at": "NOW()"
+}

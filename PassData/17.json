@@ -1,0 +1,20 @@
+{
+    "title": "도쿄 1DAY 표",
+    "siteName": "하네다 공항 액세스 가이드",
+    "siteID": "https://www.haneda-tokyo-access.com/kr/ticket/discount/tokyo1day.html",
+    "price": "910,450",
+    "period": 1,
+    "transportType": "열차, 버스",
+    "cityNames": "히카리가오카, 신에고타, 도쿄 시티, 요요기, 시부야, 신주쿠, 이케부쿠로, 우에노, 닛포리, 아사쿠사, 롯폰기, 도쿄 타워, 오다이바, 긴자, 오차노미즈, 카스가, 킨시초, 후카가와",
+    "stationNames": "히카리가오카 역, 신에고타 역, 도쿄 시티 역, 요요기 역, 시부야 역, 신주쿠 역, 이케부쿠로 역, 우에노 역, 닛포리 역, 아사쿠사 역, 롯폰기 역, 도쿄 타워 역, 오다이바 역, 긴자 역, 오차노미즈 역, 카스가 역, 킨시초 역, 후카가와 역",
+    "Map_Url": "https://www.haneda-tokyo-access.com/en/ticket/discount/img/tokyo1day_im02.gif",
+    "imageURL": "https://www.haneda-tokyo-access.com/en/ticket/discount/img/tokyo1day_im01.gif",
+    "break_even_usage": "최소 3개의 주요 구간 이용 시 본전 ex) 시나가와 - 아키하바라 (약 300엔), 아키하바라 - 시부야 (약 200엔), 시부야 - 신주쿠 (약 160엔)",
+    "benefitInformation": "",
+    "reservationInformation": "게이큐선 각 역(센가쿠지 역 제외)에서 구매 가능",
+    "refundInformation": "사용하지 않은 티켓에 한해 환불 가능하며, 환불 시 수수료가 부과됩니다. 환불은 구매처에서만 가능합니다.",
+    "productDescription": "도쿄 1DAY 표는 게이큐선 왕복 할인권과 도에이 지하철, 도쿄 도 경영 아라카와선, 닛포리 토네리라이너, 도쿄 도 경영 버스의 1일 무료 승차권 세트입니다.",
+    "routeInformation": "게이큐선, 도에이 지하철(4선), 도쿄 도 경영 아라카와선, 닛포리 토네리라이너, 도쿄 도 경영 버스",
+    "create_at": "NOW()",
+    "update_at": "NOW()"
+}

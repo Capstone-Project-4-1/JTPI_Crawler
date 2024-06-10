@@ -1,0 +1,20 @@
+{
+    "title": "아오모리 홀리데이 패스",
+    "siteName": "JR-EAST",
+    "siteID": "https://www.jreast.co.jp/tickets/info.aspx?GoodsCd=2480",
+    "price": "2520,1260",
+    "period": 1,
+    "transportType": "열차, 버스",
+    "cityNames": "고쇼가와라, 미나미오사와, 가와바타, 아이노카와, 노헤지, 도와다시, 이타야, 구사카리, 나미키, 구즈미, 미사와, 미소가와, 히로사키, 하치노헤, 가와조에, 아오모리, 신아오모리",
+    "stationNames": "고쇼가와라 역, 미나미오사와 역, 가와바타 역, 아이노카와 역, 노헤지 역, 도와다시 역, 이타야 역, 구사카리 역, 나미키 역, 구즈미 역, 미사와 역, 미소가와 역, 히로사키 역, 하치노헤 역, 가와조에 역, 아오모리 역, 신아오모리 역",
+    "Map_Url": "https://www.jreast.co.jp/tickets/mapimg/2480-1.gif",
+    "imageURL": "https://www.jreast.co.jp/material/img/logo_jr.svg",
+    "break_even_usage": "최소 3개의 주요 구간을 이용시 본전(ex)히로사키 - 하치노헤 (약 1,300엔),하치노헤 - 아오모리 (약 1,210엔))",
+    "benefitInformation": "",
+    "reservationInformation": "프리 에리어 내 주요 역의 지정석 발매기, 미도리 창구, 역 여행 컨시어지 및 주요 여행사에서 구매 가능",
+    "refundInformation": "환불은 유효 기간 내 미사용 티켓에 한해 구매처에서 가능합니다. 환불 시 220엔의 수수료가 부과됩니다. 열차 운행 중단으로 인한 환불은 제공되지 않습니다.",
+    "productDescription": "아오모리 홀리데이 패스는 토요일, 공휴일 및 특정 기간 동안 프리 에리어 내의 보통 열차(쾌속 포함) 자유석과 BRT를 무제한으로 이용할 수 있는 1일 패스입니다.",
+    "routeInformation": "프리 에리어 내의 모든 JR 보통 열차(쾌속 포함) 및 BRT",
+    "create_at": "NOW()",
+    "update_at": "NOW()"
+}

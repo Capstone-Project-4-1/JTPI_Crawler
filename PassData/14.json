@@ -1,0 +1,20 @@
+{
+    "title": "에치고 원데이 패스",
+    "siteName": "JR-EAST",
+    "siteID": "https://www.jreast.co.jp/niigata/echigo-1day2daypass/",
+    "price": "1570,780",
+    "period": 1,
+    "transportType": "열차",
+    "cityNames": "신니가타, 야히코, 요시다, 데라다, 데라오, 데라코야, 나가오카, 히가시산조, 니시산조, 신츠, 고젠, 니시노하타, 오구니, 무라카미, 사카마치, 신사도, 히다타니, 산조, 미야노, 소에츠, 고젠",
+    "stationNames": "신니가타 역, 야히코 역, 요시다 역, 데라다 역, 데라오 역, 데라코야 역, 나가오카 역, 히가시산조 역, 니시산조 역, 신츠 역, 고젠 역, 니시노하타 역, 오구니 역, 무라카미 역, 사카마치 역, 신사도 역, 히다타니 역, 산조 역, 미야노 역, 소에츠 역, 고젠 역",
+    "Map_Url": "https://www.jreast.co.jp/niigata/echigo-1day2daypass/img/1day-map.png",
+    "imageURL": "https://www.jreast.co.jp/niigata/echigo-1day2daypass/img/1day-logo.png",
+    "break_even_usage": "최소 3개의 주요 구간 이용 시 본전 (ex) 니가타 - 나가오카 (약 970엔), 나가오카 - 에치고유자와 (약 1,520엔), 에치고유자와 - 니가타 (약 1,620엔).",
+    "benefitInformation": "",
+    "reservationInformation": "프리 에리어 내의 지정석 발매기, 자동 발매기, 미도리 창구, 역 여행 컨시어지 및 주요 여행사에서 구매 가능",
+    "refundInformation": "환불은 유효 기간 내 미사용 티켓에 한해 구매처에서 가능합니다. 환불 시 220엔의 수수료가 부과됩니다. 열차 운행 중단으로 인한 환불은 제공되지 않습니다.",
+    "productDescription": "에치고 원데이 패스는 프리 에리어 내의 보통 열차를 1일 동안 무제한 이용할 수 있습니다. 특정 기간에는 사용이 제한될 수 있습니다.",
+    "routeInformation": "프리 에리어 내의 모든 JR 보통 열차(쾌속 포함)",
+    "create_at": "NOW()",
+    "update_at": "NOW()"
+}

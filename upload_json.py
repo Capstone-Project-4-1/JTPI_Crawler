@@ -20,13 +20,17 @@ cursor = conn.cursor()
 # JSON 경로 지정
 folder_path = 'PassData/'
 
-# 폴더 내 JSON 모든 JSON
+# 폴더 내 모든 JSON 파일 처리
 for filename in os.listdir(folder_path):
     if filename.endswith('.json'):
         file_path = os.path.join(folder_path, filename)
         
-        with open(file_path, 'r', encoding='utf-8') as file:
-            data = json.load(file)
+        try:
+            with open(file_path, 'r', encoding='utf-8') as file:
+                data = json.load(file)
+        except json.JSONDecodeError as e:
+            print(f"Error reading {file_path}: {e}")
+            continue
         
         # 현재 시간을 사용하여 create_at 및 update_at 값을 설정
         now = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
@@ -40,6 +44,7 @@ for filename in os.listdir(folder_path):
             """
             site_data = (data['siteName'], data['siteID'])
             cursor.execute(site_insert_query, site_data)
+            conn.commit()  # 커밋하여 삽입된 데이터를 확정
             
             # 삽입된 siteID 가져오기
             cursor.execute("SELECT `siteID` FROM `SiteList` WHERE `Url` = %s", (data['siteID'],))
@@ -48,18 +53,21 @@ for filename in os.listdir(folder_path):
                 print(f"Error: Could not retrieve siteID for URL {data['siteID']}")
                 continue
             site_id = site_id[0]
+
+            # 이전 쿼리의 결과를 모두 소모
+            cursor.fetchall()
             
             # PassInformation 테이블에 데이터 삽입
             pass_insert_query = """
             INSERT INTO `PassInformation` 
-            (`siteID`, `title`, `period`, `transportType`, `cityNames`, `create_at`, `update_at`, `imageURL`, `benefitInformation`, `reservationInformation`, `refundInformation`, `productDescription`, `stationNames`, `price`, `Map_Url`, `break_even_usage`)
-            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+            (`siteID`, `title`, `period`, `transportType`, `cityNames`, `create_at`, `update_at`, `imageURL`, `benefitInformation`, `reservationInformation`, `refundInformation`, `productDescription`, `stationNames`, `price`, `Map_Url`, `break_even_usage`, `routeInformation`)
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
             """
             pass_data = (
                 site_id, data['title'], data['period'], data['transportType'], data['cityNames'], 
                 now, now, data['imageURL'], data['benefitInformation'], data['reservationInformation'], 
                 data['refundInformation'], data['productDescription'], data['stationNames'], 
-                data['price'], data['Map_Url'], data['break_even_usage']
+                data['price'], data['Map_Url'], data['break_even_usage'], data['routeInformation']
             )
             cursor.execute(pass_insert_query, pass_data)
             
@@ -70,7 +78,7 @@ for filename in os.listdir(folder_path):
             VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
             """
             crawled_data = (
-                site_id, data['title'], data['productDescription'], data['price_adult'], data['period'], 
+                site_id, data['title'], data['productDescription'], data['price'], data['period'], 
                 data['transportType'], data['cityNames'], now, data['imageURL']
             )
             cursor.execute(crawled_insert_query, crawled_data)
@@ -78,9 +86,9 @@ for filename in os.listdir(folder_path):
         except mysql.connector.Error as err:
             print(f"Error: {err}")
             conn.rollback()
+        else:
+            conn.commit()  # 커밋하여 변경 사항을 데이터베이스에 반영
 
-# 변경사항 커밋
-conn.commit()
 # 연결 종료
 cursor.close()
 conn.close()

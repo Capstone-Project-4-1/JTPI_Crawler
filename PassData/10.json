@@ -1,0 +1,20 @@
+{
+    "title": "작은 여행 홀리데이 패스",
+    "siteName": "JR-EAST",
+    "siteID": "https://www.jreast.co.jp/tickets/info.aspx?GoodsCd=2520",
+    "price": "2720,1350",
+    "period": 1,
+    "transportType": "열차, 버스",
+    "cityNames": "신조, 오카와, 우제노, 아오조라, 하가, 요네자와, 니시야마, 야마가타, 즈오, 하가, 이마조, 니시야마, 시모노세키, 신가와, 아이즈카와구치, 아이즈와카마츠, 가마토, 후쿠시마, 히라노, 오노가와, 신카와",
+    "stationNames": "신조 역, 오카와 역, 우제노 역, 아오조라 역, 하가 역, 요네자와 역, 니시야마 역, 야마가타 역, 즈오 역, 하가 역, 이마조 역, 니시야마 역, 시모노세키 역, 신가와 역, 아이즈카와구치 역, 아이즈와카마츠 역, 가마토 역, 후쿠시마 역, 히라노 역, 오노가와 역, 신카와 역",
+    "Map_Url": "https://www.jreast.co.jp/tickets/mapimg/2520-1.gif",
+    "imageURL": "https://www.jreast.co.jp/material/img/logo_jr.svg",
+    "break_even_usage": "3~4개의 주요 구간 이용시 본전(ex)사이타마 - 치바 (약 1,250엔))",
+    "benefitInformation": "",
+    "reservationInformation": "프리 에리어 내의 JR 동일본 역의 지정석 발매기, 미도리 창구, JR EAST Travel Service Center 및 주요 여행사에서 구매 가능",
+    "refundInformation": "환불은 유효 기간 내 미사용 티켓에 한해 구매처에서 가능합니다. 환불 시 220엔의 수수료가 부과됩니다.",
+    "productDescription": "작은 여행 홀리데이 패스는 토요일, 공휴일 및 특정 기간 동안 프리 에리어 내의 보통 열차(쾌속 포함) 자유석과 BRT를 무제한으로 이용할 수 있는 1일 패스입니다.",
+    "routeInformation": "프리 에리어 내의 모든 JR 보통 열차(쾌속 포함) 및 BRT",
+    "create_at": "NOW()",
+    "update_at": "NOW()"
+}

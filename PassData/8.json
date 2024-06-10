@@ -1,0 +1,20 @@
+{
+    "title": "도쿄 모노레일 엔센 산포 티켓",
+    "siteName": "Tokyo Monorail",
+    "siteID": "https://www.tokyo-monorail.co.jp/tickets/value/ensenosanpo.html",
+    "price": "700,350",
+    "period": 1,
+    "transportType": "모노레일",
+    "cityNames": "모노레일 하마마쓰초, 덴노즈 아일, 오이케이바조마에, 류츠 센터, 쇼와지마, 세이비죠, 덴쿠바시, 하네다공항 제3터미널, 신세이비죠, 하네다공항 제1터미널, 하네다공항 제2터미널",
+    "stationNames": "모노레일 하마마쓰초 역, 덴노즈 아일 역, 오이케이바조마에 역, 류츠 센터 역, 쇼와지마 역, 세이비죠 역, 덴쿠바시 역, 하네다공항 제3터미널 역, 신세이비죠 역, 하네다공항 제1터미널 역, 하네다공항 제2터미널 역",
+    "Map_Url": "https://www.tokyo-monorail.co.jp/tickets/value/img/img_ensenosanpo_area.gif",
+    "imageURL": "https://www.tokyo-monorail.co.jp/common/template/img/tp_pc_logo.png",
+    "break_even_usage": "2개 이상의 주요 지역을 방문하면 본전",
+    "benefitInformation": "",
+    "reservationInformation": "모든 도쿄 모노레일 역의 발매기에서 구매 가능",
+    "refundInformation": "사용하지 않은 티켓에 한해 환불 가능 (수수료 부과)",
+    "productDescription": "도쿄 모노레일 엔센 산포 티켓은 도쿄 모노레일 전 구간을 1일 동안 자유롭게 이용할 수 있는 티켓입니다. 주말 및 공휴일에 유효합니다.",
+    "routeInformation": "도쿄 모노레일 전 노선",
+    "create_at": "NOW()",
+    "update_at": "NOW()"
+}
